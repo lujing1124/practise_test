@@ -1,5 +1,6 @@
 #include <stdio.h>
 int main(){
+    
     printf("40& 15=%d\n", 40&15);
     printf("40| 15=%d\n", 40|15);
     printf("40^ 15=%d\n", 40^15);

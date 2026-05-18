@@ -3,8 +3,8 @@ from PyQt5.QtWidgets import QApplication, QWidget, QLineEdit, QVBoxLayout, QText
 import sys
 
 
-def btn_clicked():
-    print("clicked send!")
+def click_func():
+    print('sendding...')
 
 def init_widget(w: QWidget):
     layout = QVBoxLayout()
@@ -39,11 +39,26 @@ def init_widget(w: QWidget):
     w.setLayout(layout)
 
 
+    btn = QPushButton()
+    btn.setText('send')
+    btn.clicked.connect(click_func)
+    layout.addWidget(btn)
+
+    btn2 = QPushButton()
+    btn2.setText('send2')
+    btn2.clicked.connect(lambda:print("sendding234..."))
+    layout.addWidget(btn2)
+
+    btn3 = QPushButton()
+    btn3.setText('send3')
+    btn3.clicked.connect(QApplication.quit)
+    layout.addWidget(btn3)
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     w = QWidget()
     w.setWindowTitle("jennyFunc")
-    w.resize(1280,960)  #窗口大小
+    w.resize(640,480)  #窗口大小
     
     init_widget(w)
 

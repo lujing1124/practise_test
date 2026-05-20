@@ -62,9 +62,15 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QLineEdit" name="edit_ip">
+       <widget class="QLineEdit" name="edit_target_ip">
         <property name="inputMask">
          <string>000.000.000.000</string>
+        </property>
+        <property name="dragEnabled">
+         <bool>false</bool>
+        </property>
+        <property name="clearButtonEnabled">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -82,6 +88,9 @@
         </property>
         <property name="placeholderText">
          <string>0-65535</string>
+        </property>
+        <property name="clearButtonEnabled">
+         <bool>false</bool>
         </property>
        </widget>
       </item>
@@ -146,7 +155,7 @@
     <string>本地IP：</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox">
+  <widget class="QComboBox" name="cb_local_ip">
    <property name="geometry">
     <rect>
      <x>340</x>

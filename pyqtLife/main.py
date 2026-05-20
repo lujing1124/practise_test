@@ -19,6 +19,7 @@ class MainWindow(QMainWindow):
         s = SerialAssistWidget(self)
         self.ui.tabWidget.addTab(w,"网络助手")
         self.ui.tabWidget.addTab(s,"串口助手")
+        self.ui.tabWidget.setCurrentIndex(1)
     
 if __name__ == "__main__":
     app = QApplication(sys.argv)

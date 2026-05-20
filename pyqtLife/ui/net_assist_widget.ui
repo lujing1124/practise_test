@@ -36,7 +36,23 @@
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QComboBox" name="cb_mode"/>
+       <widget class="QComboBox" name="cb_mode">
+        <item>
+         <property name="text">
+          <string>TCP客户端</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>TCP服务端</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>UDP</string>
+         </property>
+        </item>
+       </widget>
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="iPLabel">
@@ -46,7 +62,11 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QLineEdit" name="edit_ip"/>
+       <widget class="QLineEdit" name="edit_ip">
+        <property name="inputMask">
+         <string>000.000.000.000</string>
+        </property>
+       </widget>
       </item>
       <item row="2" column="0">
        <widget class="QLabel" name="Label_2">
@@ -56,14 +76,25 @@
        </widget>
       </item>
       <item row="2" column="1">
-       <widget class="QLineEdit" name="edit_target_port"/>
+       <widget class="QLineEdit" name="edit_target_port">
+        <property name="inputMask">
+         <string>99999</string>
+        </property>
+        <property name="placeholderText">
+         <string>0-65535</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="btn_connect">
       <property name="text">
        <string>连接服务器</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/icon/disc</normaloff>:/icon/disc</iconset>
       </property>
      </widget>
     </item>
@@ -149,6 +180,8 @@
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>
